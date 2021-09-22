@@ -23,6 +23,11 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
+    path: '/home',
+    name: 'Home',
+    component: () => import('../views/Home.vue')
+  },
+  {
     // 用冒号绑定两个要传递的参数
     path: '/params/:newsId(\\d+)/:newsTitle',
     name: 'Params',

@@ -1,5 +1,6 @@
 <template>
   <div class="hi1">
+    <p>hi1 和 hello 是alias 别名的例子</p>
     <h2>** redirect和alias的区别 **</h2>
     <span>
       redirect：仔细观察URL，redirect是直接改变了url的值，把url变成了真实的path路径。

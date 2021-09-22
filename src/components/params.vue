@@ -4,6 +4,7 @@
     <!-- 接收传递过来的参数 -->
     <p>newsID：{{ $route.params.newsId }}</p>
     <p>newsTitle：{{ $route.params.newsTitle }}</p>
+    <p>params 和 goparams 是带参数的重定向</p>
   </div>
 </template>
 

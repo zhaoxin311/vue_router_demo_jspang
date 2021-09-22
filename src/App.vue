@@ -7,6 +7,8 @@
        传递： <router-link :to="{ name: 'hi1', params: { username: 'jspang', id: 22 } }" >hi1</router-link> 
       接收：{{ message }}---{{ $route.params.username }}---{{ $route.params.id }}
         -->
+    <router-link to="/home">Home</router-link>
+    |
     <router-link to="/">about</router-link>
     |
     <!-- 加入了正则，我们再传递数字之外的其他参数，params.vue组件就没有办法接收到 -->
@@ -20,7 +22,10 @@
     |
     <router-link to="/hello">hello</router-link>
 
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+
     <!-- <router-view name="left" class="left" />
     <router-view name="right" class="right" /> -->
   </div>
@@ -34,18 +39,18 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.fade-enter {
+  opacity: 0; //透明度为完全透明
+}
+.fade-leave {
+  opacity: 1; //透明度为不透明
+}
+.fade-enter-active {
+  transition: opacity 0.5s; //
+}
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 .left {
   float: left;
