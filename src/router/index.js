@@ -47,11 +47,15 @@ const routes = [
     path: '/hi1',
     alias: '/hello',
     component: () => import('../components/hi1.vue')
+  },
+  {
+    path: '*',
+    component: () => import('../components/404.vue')
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history', //
   base: process.env.BASE_URL,
   routes
 })

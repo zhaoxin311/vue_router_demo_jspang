@@ -29,6 +29,15 @@
       <br />
       2. out-in(先出后进):当前元素先进行过渡离开，离开完成后新元素过渡进入。
     </span>
+    <hr />
+    <h3>** mode(router/index.js里的mode)的两个值 **</h3>
+    <span>
+      1、histroy:当你使用 history 模式时，URL 就像正常的 url，例如
+      http://jsapng.com/lms/，也好看！
+      <br />
+      2、hash:默认’hash’值，但是hash看起来就像无意义的字符排列，不太好看也不符合我们一般的网址浏览习惯。
+    </span>
+    <hr />
   </div>
 </template>
 

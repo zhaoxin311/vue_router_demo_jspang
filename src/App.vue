@@ -21,6 +21,8 @@
     <router-link to="/hi1">hi1</router-link>
     |
     <router-link to="/hello">hello</router-link>
+    |
+    <router-link to="/sss">瞎写的</router-link>
 
     <transition name="fade" mode="out-in">
       <router-view />
