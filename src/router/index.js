@@ -27,6 +27,15 @@ const routes = [
     path: '/params/:newsId(\\d+)/:newsTitle',
     name: 'Params',
     component: () => import('../components/params.vue')
+  },
+  {
+    path: '/goAbout',
+    // ** redirect基本重定向 **
+    redirect: '/'
+  },
+  {
+    path: '/goparams/:newsId(\\d+)/:newsTitle',
+    redirect: '/params/:newsId(\\d+)/:newsTitle'
   }
 ]
 

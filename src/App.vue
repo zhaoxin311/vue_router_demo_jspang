@@ -11,6 +11,11 @@
     |
     <!-- 加入了正则，我们再传递数字之外的其他参数，params.vue组件就没有办法接收到 -->
     <router-link to="/params/189/this is a title">params</router-link>
+    |
+    <router-link to="/goAbout">goHome</router-link>
+    |
+    <router-link to="/goparams/18449/this is a goparams">goparams</router-link>
+
     <router-view />
     <!-- <router-view name="left" class="left" />
     <router-view name="right" class="right" /> -->
