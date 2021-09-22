@@ -34,8 +34,14 @@ const routes = [
     redirect: '/'
   },
   {
+    // ** 重定向时传递参数**
     path: '/goparams/:newsId(\\d+)/:newsTitle',
     redirect: '/params/:newsId(\\d+)/:newsTitle'
+  },
+  {
+    path: '/hi1',
+    alias: '/hello',
+    component: () => import('../components/hi1.vue')
   }
 ]
 
