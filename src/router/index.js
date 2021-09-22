@@ -32,6 +32,15 @@ const routes = [
     path: '/params/:newsId(\\d+)/:newsTitle',
     name: 'Params',
     component: () => import('../components/params.vue')
+    // ** 路由配置文件中的钩子函数 **
+    // beforeEnter: (to, from, next) => {
+    //   console.log(to)
+    //   console.log(from) //to和from 是对象
+    //   next() //允许可以跳转
+    //   //next(false)  //不跳转
+    //   //next(true)  //跳转
+    //   //next({path:'/'})  //对象形式  此处可以跳转到根目录
+    // }
   },
   {
     path: '/goAbout',
