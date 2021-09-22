@@ -1,7 +1,7 @@
 <template>
   <div class="hi1">
     <h2>
-      {{ message }}---{{ $route.params.username }}---{{ $route.params.id }}
+      {{ message }}
     </h2>
   </div>
 </template>

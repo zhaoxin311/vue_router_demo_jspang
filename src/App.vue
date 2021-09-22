@@ -1,25 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-      |
-      <router-link to="/hi">hi</router-link>
-      |
-      <!-- 传值的第二种方式，name对应router中的name，params是要传递的参数，可以传多个参数 -->
-      <router-link
-        :to="{ name: 'hi1', params: { username: 'jspang', id: 22 } }"
-      >
-        hi1
-      </router-link>
-      |
-      <router-link to="/hi/hi2">hi2</router-link>
-      |
-    </div>
-    <!-- 类似于面包屑的功能  传值的第一种方式 -->
-    <p>{{ $route.name }}</p>
+    <!-- 传值的第一种方式   类似于面包屑的功能   -->
+    <!-- <p>{{ $route.name }}</p> -->
+    <!-- 传值的第二种方式，name对应router中的name，params是要传递的参数，可以传多个参数 -->
+    <!-- 
+       传递： <router-link :to="{ name: 'hi1', params: { username: 'jspang', id: 22 } }" >hi1</router-link> 
+      接收：{{ message }}---{{ $route.params.username }}---{{ $route.params.id }}
+        -->
     <router-view />
+    <router-view name="left" class="left" />
+    <router-view name="right" class="right" />
   </div>
 </template>
 
@@ -43,5 +33,17 @@
       color: #42b983;
     }
   }
+}
+.left {
+  float: left;
+  width: 50%;
+  height: 300px;
+  background: #bbb;
+}
+.right {
+  float: left;
+  width: 50%;
+  height: 300px;
+  background: #999;
 }
 </style>
