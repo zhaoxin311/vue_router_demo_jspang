@@ -7,6 +7,11 @@
        传递： <router-link :to="{ name: 'hi1', params: { username: 'jspang', id: 22 } }" >hi1</router-link> 
       接收：{{ message }}---{{ $route.params.username }}---{{ $route.params.id }}
         -->
+    <div>
+      <button @click="back">后退</button>
+      <button @click="goto">前进</button>
+      <button @click="gohome">返回首页</button>
+    </div>
     <router-link to="/home">Home</router-link>
     |
     <router-link to="/">about</router-link>
@@ -32,7 +37,25 @@
     <router-view name="right" class="right" /> -->
   </div>
 </template>
-
+<script>
+export default {
+  name: 'app',
+  data() {
+    return {}
+  },
+  methods: {
+    goto() {
+      this.$router.go(1)
+    },
+    back() {
+      this.$router.go(-1)
+    },
+    gohome() {
+      this.$router.push('/home') //跳转到任意一页
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
